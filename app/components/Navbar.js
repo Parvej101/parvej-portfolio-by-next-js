@@ -1,22 +1,67 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 export default function Navbar() {
+   // Define the navigation options in an array
+   const navOptions = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
   return (
-    <nav className="bg-gray-900 text-white py-4">
-    <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <Link href="/" className="text-2xl font-bold">
-        MH Parvej
-      </Link>
-      <div className="space-x-6">
-        <Link href="#about" className="hover:text-orange-500">About</Link>
-        <Link href="#projects" className="hover:text-orange-500">Projects</Link>
-        <Link href="#contact" className="hover:text-orange-500">Contact</Link>
-        <Link href="#contact" className="btn btn-ghost">hi</Link>
-    
+    <nav className="">
+      <div className="navbar bg-gray-900 text-white py-4 shadow-sm">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-gray-900 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              {navOptions.map((option) => (
+                <li key={option.href}>
+                  <Link href={option.href}>
+                    {option.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <a className="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal space-x-6">
+          {navOptions.map((option) => (
+                <li key={option.href}>
+                  <Link href={option.href} className="hover:text-gray-300">
+                    {option.label}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
+        <div className="navbar-end">
+          <a className="btn">Button</a>
+        </div>
       </div>
-     
-    </div>
-  </nav>
-  )
+    </nav>
+  );
 }
