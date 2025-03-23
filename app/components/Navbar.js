@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-
+import logo from '@/public/images/logo.png';
+import Image from "next/image";
 export default function Navbar() {
    // Define the navigation options in an array
    const navOptions = [
@@ -11,8 +12,8 @@ export default function Navbar() {
     { href: "#contact", label: "Contact" },
   ];
   return (
-    <nav className="">
-      <div className="navbar bg-gray-900 text-white py-4 shadow-sm">
+    <nav className="bg-gray-900 text-white ">
+      <div className="navbar py-4 shadow-sm max-w-7xl mx-auto px-4 sticky top-0 z-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +46,7 @@ export default function Navbar() {
               ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+         <div className="bg-white rounded-full"> <Link href={'#home'}><Image src={logo} alt="Logo" width={50} height={50} /></Link></div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-6">
@@ -59,7 +60,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn hover:bg-gray-300">Resume</a>
         </div>
       </div>
     </nav>
