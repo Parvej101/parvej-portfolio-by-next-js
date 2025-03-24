@@ -10,8 +10,8 @@ export default function Banner() {
       <section className="flex flex-col md:flex-row items-center justify-around lg:py-24 py-10 text-white max-w-7xl mx-auto px-4">
         {/* Left side - Text */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm MH Parvej
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Hi, I am MH Parvej
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-3">
             A passionate Frontend Developer who loves crafting interactive and
@@ -27,7 +27,7 @@ export default function Banner() {
             ]}
             speed={50} // Typing speed (in ms)
             repeat={Infinity} // Continuously repeat the animation
-            className="text-xl font-extrabold text-green-400"
+            className="lg:text-xl text-md lg:font-extrabold font-semibold py-5 text-green-400"
           />
           <div className="space-x-2 mt-3 lg:space-x-4 flex">
             <a
