@@ -34,10 +34,10 @@ export default function SkillsCard() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
+            <h2 className="text-xl md:text-3xl font-extrabold mb-4">
               Technology Arsenal
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="lg:text-lg text-md text-gray-300 max-w-3xl mx-auto">
               I leverage these cutting-edge technologies to build efficient and
               high-performing applications. My journey is fueled by continuous
               learning and adaptation to emerging trends, ensuring I craft

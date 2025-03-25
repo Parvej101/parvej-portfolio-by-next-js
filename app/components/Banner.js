@@ -17,8 +17,8 @@ export default function Banner() {
             A passionate Frontend Developer who loves crafting interactive and
             responsive web applications.
           </p>
-           {/* Typing Effect */}
-           <TypeAnimation
+          {/* Typing Effect */}
+          <TypeAnimation
             sequence={[
               "Let's Go!",
               2000, // Wait for 2 seconds
@@ -46,9 +46,8 @@ export default function Banner() {
           </div>
         </div>
 
-     
-         {/* Right side - Image */}
-         <motion.div
+        {/* Right side - Image */}
+        <motion.div
           className="w-full md:w-1/2 flex md:justify-end items-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,9 +58,11 @@ export default function Banner() {
             <Image
               src={profilePic}
               alt="MH Parvej"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               className="rounded-full shadow-lg"
+              sizes="(max-width: 768px) 100vw, 50vw" // Adjust sizes based on your design
+              priority // Marks this as a priority image for LCP
             />
 
             {/* Animated Floating Effect under the Image */}
