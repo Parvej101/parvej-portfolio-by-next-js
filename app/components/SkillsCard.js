@@ -1,134 +1,103 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiFirebase, SiExpress } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiFirebase,
+  SiExpress,
+} from "react-icons/si";
+import CurrentlyLearning from "./CurrentlyLearning";
 
 export default function SkillsCard() {
   return (
-    <div id="skills" className="w-full bg-gray-800 text-white py-10">
-    <div className="max-w-7xl mx-auto px-6 lg:py-10 md:px-16">
-        <motion.div
-            className="text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-        >
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">My Skills</h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                These are the technologies I work with. I am constantly improving my knowledge and skills in these areas.
+    <motion.div
+      id="skills"
+      className="w-full bg-gray-800 text-white py-10"
+      initial={{ opacity: 0, y: 50 }} // Start hidden
+      animate={{ opacity: 1, y: 0 }} // Animate to visible
+      transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:py-10 md:px-16">
+        {/* Content Section */}
+        <div className="flex flex-col lg:flex-row mb-10 gap-5">
+          <motion.div
+            className="text-left flex-1 border-2 p-5 rounded-lg"
+            initial={{ opacity: 0, x: -50 }} // Slide-in from left
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
+              Technology Arsenal
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              I leverage these cutting-edge technologies to build efficient and
+              high-performing applications. My journey is fueled by continuous
+              learning and adaptation to emerging trends, ensuring I craft
+              scalable, robust, and user-centric solutions.
             </p>
-        </motion.div>
-
-        {/* Skills Cards */}
-        <div className="flex overflow-x-hidden text-black">
-            <motion.div
-                className="flex space-x-8 animate-marquee"
-                initial={{ x: '30%' }}
-                animate={{ x: '-100%' }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            >
-                {/* HTML5 */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <FaHtml5 size={40} />
-                    <p className="mt-2 text-lg">HTML5</p>
-                </motion.div>
-
-                {/* CSS3 */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <FaCss3Alt size={40} />
-                    <p className="mt-2 text-lg">CSS3</p>
-                </motion.div>
-
-                {/* Tailwind */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <SiTailwindcss size={40} />
-                    <p className="mt-2 text-lg">Tailwind CSS</p>
-                </motion.div>
-
-                {/* JavaScript */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <FaJs size={40} />
-                    <p className="mt-2 text-lg">JavaScript</p>
-                </motion.div>
-
-                {/* React */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <FaReact size={40} />
-                    <p className="mt-2 text-lg">React</p>
-                </motion.div>
-
-                {/* MongoDB */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <SiMongodb size={40} />
-                    <p className="mt-2 text-lg">MongoDB</p>
-                </motion.div>
-
-                {/* Node.js */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <FaNodeJs size={40} />
-                    <p className="mt-2 text-lg">Node.js</p>
-                </motion.div>
-
-                {/* Firebase */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <SiFirebase size={40} />
-                    <p className="mt-2 text-lg">Firebase</p>
-                </motion.div>
-
-                {/* Express */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <SiExpress size={40} />
-                    <p className="mt-2 text-lg">Express</p>
-                </motion.div>
-
-                {/* GitHub */}
-                <motion.div
-                    className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <FaGithub size={40} />
-                    <p className="mt-2 text-lg">GitHub</p>
-                </motion.div>
-            </motion.div>
+          </motion.div>
+          <motion.div
+            className="flex-1 text-left border-2 p-5 rounded-lg"
+            initial={{ opacity: 0, x: 50 }} // Slide-in from right
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <CurrentlyLearning />
+          </motion.div>
         </div>
-    </div>
-</div>
-  )
+
+        {/* Skills Cards with Marquee Effect */}
+        <div className="flex overflow-hidden text-black">
+          <motion.div
+            className="flex space-x-8"
+            initial={{ x: "30%" }}
+            animate={{ x: "-100%" }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 1,
+            }}
+          >
+            {/* Skills List */}
+            {[ // Skills array to map through
+              { Icon: FaHtml5, name: "HTML5" },
+              { Icon: FaCss3Alt, name: "CSS3" },
+              { Icon: SiTailwindcss, name: "Tailwind CSS" },
+              { Icon: FaJs, name: "JavaScript" },
+              { Icon: FaReact, name: "React" },
+              { Icon: SiMongodb, name: "MongoDB" },
+              { Icon: FaNodeJs, name: "Node.js" },
+              { Icon: SiFirebase, name: "Firebase" },
+              { Icon: SiExpress, name: "Express" },
+              { Icon: FaGithub, name: "GitHub" },
+            ].map((skill, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-xl w-40 flex flex-col items-center justify-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1, // Stagger effect
+                }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <skill.Icon size={40} />
+                <p className="mt-2 text-lg">{skill.name}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
 }

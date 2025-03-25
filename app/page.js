@@ -1,6 +1,7 @@
 
 import About from "./components/About";
 import Banner from "./components/Banner";
+
 import SkillsCard from "./components/SkillsCard";
 
 
@@ -10,6 +11,7 @@ export default function Home() {
     <Banner></Banner>
     <About></About>
     <SkillsCard></SkillsCard>
+    
    </div>
   );
 }
