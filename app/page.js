@@ -1,13 +1,15 @@
 
 import About from "./components/About";
 import Banner from "./components/Banner";
+import SkillsCard from "./components/SkillsCard";
 
 
 export default function Home() {
   return (
-   <div>
+   <div className="">
     <Banner></Banner>
-    <div><About></About></div>
+    <About></About>
+    <SkillsCard></SkillsCard>
    </div>
   );
 }
