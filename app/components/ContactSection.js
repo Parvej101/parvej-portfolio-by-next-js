@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import ContactInfo from "./ContactInfo";
+import GlobalContact from "./GlobalContact";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -43,45 +45,49 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-10 bg-gray-800 text-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-3 rounded-md bg-gray-700 text-white focus:outline-none"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-3 rounded-md bg-gray-700 text-white focus:outline-none"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            rows="5"
-            className="w-full p-3 rounded-md bg-gray-700 text-white focus:outline-none"
-            required
-          ></textarea>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md"
-          >
-            Send Message
-          </button>
-        </form>
-        {status && <p className="mt-4 text-center">{status}</p>}
+    <section id="contact" className="py-10 bg-gray-800 text-white ">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6 text-center py-5">Connect Me</h2>
+        <ContactInfo></ContactInfo>
+        <GlobalContact></GlobalContact>
+        <div className=" mx-auto px-6 py-3">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full p-3 rounded-md bg-gray-700 text-white focus:outline-none"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full p-3 rounded-md bg-gray-700 text-white focus:outline-none"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="5"
+              className="w-full p-3 rounded-md bg-gray-700 text-white focus:outline-none"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="btn bg-white text-black px-4 sm:px-6 py-2 rounded-md hover:bg-gray-300 transition w-full"
+            >
+              Send Message
+            </button>
+          </form>
+          {status && <p className="mt-4 text-center">{status}</p>}
+        </div>
       </div>
     </section>
   );

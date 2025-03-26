@@ -1,6 +1,7 @@
 
 import About from "./components/About";
 import Banner from "./components/Banner";
+import ContactInfo from "./components/ContactInfo";
 import ContactSection from "./components/ContactSection";
 import Project from "./components/Project";
 
@@ -15,7 +16,11 @@ export default function Home() {
     <About></About>
     <SkillsCard></SkillsCard>
     <Project></Project>
+    {/* <ContactInfo></ContactInfo> */}
     <ContactSection></ContactSection>
+    <div>
+      
+    </div>
     
    </div>
   );
