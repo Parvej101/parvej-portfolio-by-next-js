@@ -52,7 +52,7 @@ export default function ProjectCard({ project }) {
           <a
             href={project.liveLink}
             target="_blank"
-            className=" text-white  btn btn-ghost border-white hover:bg-gray-500 px-4 py-2 rounded-md"
+            className=" btn bg-white text-black lg:px-6 px-3 py-2 rounded-md hover:bg-gray-200 transition"
           >
             Live Demo
           </a>
