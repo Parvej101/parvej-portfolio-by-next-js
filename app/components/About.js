@@ -7,7 +7,7 @@ import AnimateButton from "./AnimateButton";
 import { TypeAnimation } from "react-type-animation";
 export default function About() {
   return (
-    <section className="py-16 px-6 lg:px-20 bg-gray-900 text-white">
+    <section id="about" className="py-16 px-6 lg:px-20 bg-gray-900 text-white">
     <motion.div
       className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"
       initial={{ opacity: 0 }}

@@ -12,8 +12,8 @@ export default function Navbar() {
     { href: "#contact", label: "Contact" },
   ];
   return (
-    <nav className="bg-gray-900 text-white ">
-      <div className="navbar py-4 shadow-sm max-w-7xl mx-auto px-4 sticky top-0 z-10">
+    <nav className="bg-gray-900 text-white sticky top-0 z-50  ">
+      <div className="navbar py-4 shadow-sm max-w-7xl mx-auto px-4 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
