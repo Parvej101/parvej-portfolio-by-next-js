@@ -1,3 +1,4 @@
+"use client";
 import ProjectCard from "./ProjectCard";
 
 import hopeHive1 from "@/public/images/b1.jpg";
@@ -6,6 +7,7 @@ import hopeHive3 from "@/public/images/b3.jpg";
 import classVault1 from "@/public/images/p1.jpg";
 import classVault2 from "@/public/images/p2.jpg";
 import classVault3 from "@/public/images/p3.jpg";
+import { use } from "react";
 
 const projects = [
   {

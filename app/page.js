@@ -1,7 +1,6 @@
 
 import About from "./components/About";
 import Banner from "./components/Banner";
-import ContactInfo from "./components/ContactInfo";
 import ContactSection from "./components/ContactSection";
 import Project from "./components/Project";
 
