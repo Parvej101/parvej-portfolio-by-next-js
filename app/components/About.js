@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import codingAnimation from "@/public/images/coding.json";
-import AnimateButton from "./AnimateButton";
 import { TypeAnimation } from "react-type-animation";
 export default function About() {
   return (
